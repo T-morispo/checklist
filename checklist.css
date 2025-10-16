@@ -1,0 +1,29 @@
+.tytle1{
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.cl-img1{
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tyuui{
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.tyuui p{
+    margin: 5px 0;
+}
