@@ -1,0 +1,107 @@
+/* ========== Base Styles ========== */
+body {
+  font-family: sans-serif;
+  padding: 1em;
+
+  /* ①画面一面に画像を配置 */
+  background-image: url("picture/雪山.png"); /* ←雪山画像のパスに変更 */
+  background-size: cover; /* 画像を画面いっぱいに拡大縮小 */
+  background-position: center; /* 中央に配置 */
+
+  /* ②スクロールしても固定 */
+  background-attachment: fixed;
+
+  /* ③すべての要素の後ろに配置 → body背景なので自動的に一番後ろ */
+
+  /* ④透明化して目立ちすぎないように */
+  background-color: rgba(255, 255, 255, 0.7); /* 白を半透明で重ねる */
+  background-blend-mode: lighten; /* 背景画像と色を合成して淡くする */
+}
+
+/* ========== Checklist Layout ========== */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  gap: 0.25em;
+}
+
+/* ========== Header Section ========== */
+.checklist-header {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  width: fit-content;
+}
+
+/* ========== Main Page Title ========== */
+#main-title {
+  font-size: 2rem; /* 見出しの大きさ */
+  text-align: center; /* 中央寄せ */
+  margin: 0 0 1rem; /* 下に余白 */
+  color: #1a5a9a; /* 見出しの色 */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* うっすら影を追加 */
+}
+
+.checklist-title {
+  margin: 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 0.5em;
+}
+
+/* ========== Details Section ========== */
+.checklist-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.checklist-image {
+  width: 120px;
+  height: 120px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* はみ出した部分を隠す */
+}
+
+.checklist-image img {
+  max-width: 90%;
+  max-height: 90%; /* 親要素からはみ出さないように制限する */
+  object-fit: contain; /* アスペクト比を保ちつつ円（親要素）の中に収める */
+}
+
+.checklist-message {
+  margin: 0.5em 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.checklist-link {
+  text-decoration: none;
+  color: #0077cc;
+  margin-top: 0.5em;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+  .checklist-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checklist-details {
+    margin-top: 0.5em;
+  }
+}
