@@ -100,7 +100,6 @@ input[type="checkbox"] {
   body {
     background-image: url("picture/雪山2.png"); /* ←雪山画像のパスに変更 */
     background-size: cover; /* 画像を画面いっぱいに拡大縮小 */
-    background-position: center; /* 中央に配置 */
   }
 
   #main-title {
@@ -164,3 +163,4 @@ input[type="checkbox"] {
     margin-right: auto;
   }
 }
+
