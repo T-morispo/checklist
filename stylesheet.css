@@ -95,16 +95,6 @@ input[type="checkbox"] {
 }
 
 /* ========== Responsive ========== */
-@media (max-width: 770px) {
-  .checklist-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .checklist-details {
-    margin-top: 0.5em;
-  }
-}
 
 @media (max-width: 770px) {
   body {
@@ -163,6 +153,7 @@ input[type="checkbox"] {
     font-size: 1.1rem; /* 読みやすい大きさに調整 */
     line-height: 1.5; /* 行間を広げてタップしやすく */
     font-weight: 500; /* 少し太めにして視認性向上 */
+    text-align: center; /* 中央寄せ */
   }
 
   .checklist-link {
