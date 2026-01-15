@@ -98,12 +98,25 @@ input[type="checkbox"] {
 
 @media (max-width: 770px) {
   body {
-    background-image: url("picture/雪山2.png"); /* ←雪山画像のパスに変更 */
-    background-attachment: scroll; /* ← iPhoneでfixedはNG */
-    background-size: contain;      /* ← 画像全体を収める */
-    background-repeat: no-repeat;  /* ← 繰り返し防止 */
-    background-position: center;   /* ← 中央に配置 */
-    min-height: 100vh;
+    background: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("picture/雪山.png");
+    background-size: cover; /* 画面いっぱいに */
+    background-position: center; /* 中央に配置 */
+    background-repeat: no-repeat;
+
+    z-index: -1; /* 背景として後ろに配置 */
   }
 
   #main-title {
@@ -167,6 +180,3 @@ input[type="checkbox"] {
     margin-right: auto;
   }
 }
-
-
-
