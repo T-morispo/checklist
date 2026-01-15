@@ -71,8 +71,8 @@ input[type="checkbox"] {
   background-color: yellow;
   border-radius: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* 画像を中央に配置 */
+  justify-content: center; /* 画像を中央に配置 */
   overflow: hidden; /* はみ出した部分を隠す */
 }
 
@@ -95,7 +95,7 @@ input[type="checkbox"] {
 }
 
 /* ========== Responsive ========== */
-@media (max-width: 600px) {
+@media (max-width: 770px) {
   .checklist-item {
     flex-direction: column;
     align-items: flex-start;
@@ -103,5 +103,67 @@ input[type="checkbox"] {
 
   .checklist-details {
     margin-top: 0.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  #main-title {
+    font-size: 1.6em;
+    text-align: center;
+    color: #f47a4d;
+    width: 100%;
+    margin-bottom: 0.5em;
+    word-break: break-word;
+  }
+
+  .checklist-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5em;
+  }
+
+  .checklist-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ← これが重要 */
+    gap: 0.5em; /* チェックボックスと文字の間隔を一定に */
+    width: 100%; /* 中央寄せのために横幅を広げる */
+  }
+  .checklist-title {
+    font-size: 1.2rem; /* 少し大きめで読みやすい */
+    word-break: break-word; /* 長い単語でも折り返す */
+    white-space: normal; /* 必ず折り返しを許可 */
+    width: 100%; /* 横幅いっぱいに広げる */
+    font-weight: bold;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5);
+  }
+
+  .checklist-image {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* 中央寄せのために必要 */
+    display: flex;
+    align-items: center; /* 画像を中央に配置 */
+    justify-content: center; /* 画像を中央に配置 */
+    overflow: hidden; /* はみ出した部分を隠す */
+  }
+
+  .checklist-details {
+    margin-top: 0.5em;
+    font-size: 1.1rem; /* 読みやすい大きさに調整 */
+    line-height: 1.5; /* 行間を広げてタップしやすく */
+    font-weight: 500; /* 少し太めにして視認性向上 */
+  }
+
+  .checklist-link {
+    font-size: 1.1rem; /* リンクも大きめに */
+    text-align: center; /* 中央寄せ */
+    display: block; /* 中央寄せのために必要 */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
